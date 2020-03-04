@@ -22,8 +22,10 @@ scanButton.addEventListener("click", async () => {
     		log("MIME type:    " + record.mediaType);
 			log('record length:' + record.data.length);
     		log("Record id:    " + record.id);
+			log("Record lang:    " + record.lang);
 			log("Record encoding:    " + record.encoding);
 			log("Record data:    " + record.data);
+			log('torecords    ' 	+	record.toRecords());
 				
 			console.log("record" +JSON.stringify(record));
 			console.log("dataview" +JSON.stringify(record.data));

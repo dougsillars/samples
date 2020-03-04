@@ -14,11 +14,8 @@ scanButton.addEventListener("click", async () => {
       log(`> Serial Number: ${serialNumber}`);
       log(`> Records: (${message.records.length})`);
 	  var output = '';
-	  for (var property in ${message.records}) {
-	    output += property + ': ' + object[property]+'; ';
-	  }
-	  var str = JSON.stringify(${message.records});
-	  var str1 = JSON.stringify(message.records);
+	  var str = JSON.stringify(message.records);
+	  var str1 = JSON.stringify(message);
 	  log(`> Records: `+str);
 	  log(`> Records: `+str1);
 	  log(`> message	: `+ output);

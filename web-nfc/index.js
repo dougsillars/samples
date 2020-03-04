@@ -24,12 +24,13 @@ scanButton.addEventListener("click", async () => {
 	  for (const record of message.records) {
     	  	log("Record type:  " + record.recordType);
     		log("MIME type:    " + record.mediaType);
+			log('record length:' + record.length);
     		log("Record id:    " + record.id);
 			log("Record encoding:    " + record.encoding);
 			log("Record data:    " + record.data);
-
-			console.log("record" +record);
-			console.log("dataview" +record.data);
+				
+			console.log("record" +JSON.stringify(record));
+			console.log("dataview" +JSON.stringify(record.data));
     		switch (record.recordType) {
      	   		case "text":
        				// TODO: Read text record with record data, lang, and encoding.

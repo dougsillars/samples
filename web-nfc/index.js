@@ -18,7 +18,8 @@ scanButton.addEventListener("click", async () => {
 	  var str1 = JSON.stringify(message);
 	  log(`> Records: `+str);
 	  log(`> Records: `+str1);
-	  log(`> message	: `+ output);
+	  log(`> message	: `+ message);
+	  console.log("message" +message);
 	  //
 	  for (const record of message.records) {
     	  	log("Record type:  " + record.recordType);
@@ -26,7 +27,9 @@ scanButton.addEventListener("click", async () => {
     		log("Record id:    " + record.id);
 			log("Record encoding:    " + record.encoding);
 			log("Record data:    " + record.data);
-			console.log(record.data);
+
+			console.log("record" +record);
+			console.log("dataview" +record.data);
     		switch (record.recordType) {
      	   		case "text":
        				// TODO: Read text record with record data, lang, and encoding.

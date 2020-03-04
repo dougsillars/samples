@@ -13,8 +13,13 @@ scanButton.addEventListener("click", async () => {
     reader.addEventListener("reading", ({ message, serialNumber }) => {
       log(`> Serial Number: ${serialNumber}`);
       log(`> Records: (${message.records.length})`);
+	  var output = '';
+	  for (var property in ${message.records}) {
+	    output += property + ': ' + object[property]+'; ';
+	  }
+	  
 	  log(`> Records: (${message.records})`);
-	  log(`> message: (${message})`);
+	  log(`> message	: output`);
     });
   } catch (error) {
     log("Argh! " + error);

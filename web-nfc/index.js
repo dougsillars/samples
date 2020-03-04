@@ -27,8 +27,10 @@ scanButton.addEventListener("click", async () => {
     		switch (record.recordType) {
      	   		case "text":
        				// TODO: Read text record with record data, lang, and encoding.
-					var text = record.data;
-					log("text payload: " + text + " "+record.payload);
+					
+					const decoder = new TextDecoder(record.encoding);
+					 var text = decoder.decode(record.data);
+					log("text payload: " + text );
        				break;
       	  	  	case "url":
         	  		// TODO: Read URL record with record data.

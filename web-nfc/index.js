@@ -19,6 +19,24 @@ scanButton.addEventListener("click", async () => {
 	  log(`> Records: `+str);
 	  log(`> Records: `+str1);
 	  log(`> message	: `+ output);
+	  //
+	  for (const record of message.records) {
+    	  	log("Record type:  " + record.recordType);
+    		log("MIME type:    " + record.mediaType);
+    		log("Record id:    " + record.id);
+    		switch (record.recordType) {
+     	   		case "text":
+       				// TODO: Read text record with record data, lang, and encoding.
+       				break;
+      	  	  	case "url":
+        	  		// TODO: Read URL record with record data.
+        	  		break;
+      	  	  	default:
+        	  		// TODO: Handle other records with record data.
+			}
+  		}
+	  
+	  
     });
   } catch (error) {
     log("Argh! " + error);

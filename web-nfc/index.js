@@ -17,9 +17,11 @@ scanButton.addEventListener("click", async () => {
 	  for (var property in ${message.records}) {
 	    output += property + ': ' + object[property]+'; ';
 	  }
-	  
-	  log(`> Records: (${message.records})`);
-	  log(`> message	: output`);
+	  var str = JSON.stringify(${message.records});
+	  var str1 = JSON.stringify(message.records);
+	  log(`> Records: `+str);
+	  log(`> Records: `+str1);
+	  log(`> message	: `+ output);
     });
   } catch (error) {
     log("Argh! " + error);

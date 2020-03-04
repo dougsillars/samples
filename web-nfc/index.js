@@ -14,17 +14,13 @@ scanButton.addEventListener("click", async () => {
       log(`> Serial Number: ${serialNumber}`);
       log(`> Records: (${message.records.length})`);
 	  var output = '';
-	  var str = JSON.stringify(message.records);
-	  var str1 = JSON.stringify(message);
-	  log(`> Records: `+str);
-	  log(`> Records: `+str1);
 	  log(`> message	: `+ message);
 	  console.log("message" +message);
 	  //
 	  for (const record of message.records) {
     	  	log("Record type:  " + record.recordType);
     		log("MIME type:    " + record.mediaType);
-			log('record length:' + record.length);
+			log('record length:' + record.data.length);
     		log("Record id:    " + record.id);
 			log("Record encoding:    " + record.encoding);
 			log("Record data:    " + record.data);

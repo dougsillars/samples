@@ -26,6 +26,7 @@ scanButton.addEventListener("click", async () => {
     		log("Record id:    " + record.id);
 			log("Record encoding:    " + record.encoding);
 			log("Record data:    " + record.data);
+			console.log(record.data);
     		switch (record.recordType) {
      	   		case "text":
        				// TODO: Read text record with record data, lang, and encoding.

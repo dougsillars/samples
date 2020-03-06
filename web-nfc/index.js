@@ -36,6 +36,7 @@ scanButton.addEventListener("click", async () => {
 					const decoder = new TextDecoder(record.encoding);
 					 var text = decoder.decode(record.data);
 					log("text payload: " + text );
+					console.log("text payload: " + text );
        				break;
       	  	  	case "url":
         	  		// TODO: Read URL record with record data.

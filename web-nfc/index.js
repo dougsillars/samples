@@ -40,6 +40,7 @@ scanButton.addEventListener("click", async () => {
 					
 					const decoder = new TextDecoder(record.encoding);
 					 var text = decoder.decode(record.data);
+					 var file  = decoder.decode(record);
 					log("text payload: " + text );
 					console.log("text payload: " + text );
        				break;

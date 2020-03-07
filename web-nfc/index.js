@@ -11,7 +11,12 @@ scanButton.addEventListener("click", async () => {
     });
 
     reader.addEventListener("reading", ({ message, serialNumber }) => {
-      log(`> Serial Number: ${serialNumber}`);
+      
+	  
+	  
+	  
+	  
+	  log(`> Serial Number: ${serialNumber}`);
       log(`> Records: (${message.records.length})`);
 	  var output = '';
 	  log(`> message	: `+ message);
@@ -33,7 +38,7 @@ scanButton.addEventListener("click", async () => {
      	   		case "text":
        				// TODO: Read text record with record data, lang, and encoding.
 					
-					const decoder = new TextDecoder(record.encoding);
+					const decoder = new TextDecoder("UTF-8");
 					 var text = decoder.decode(record.data);
 					log("text payload: " + text );
 					console.log("text payload: " + text );

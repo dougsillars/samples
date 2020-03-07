@@ -38,7 +38,7 @@ scanButton.addEventListener("click", async () => {
      	   		case "text":
        				// TODO: Read text record with record data, lang, and encoding.
 					
-					const decoder = new TextDecoder("UTF-8");
+					const decoder = new TextDecoder("UTF-16");
 					 var text = decoder.decode(record.data);
 					log("text payload: " + text );
 					console.log("text payload: " + text );

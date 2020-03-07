@@ -43,6 +43,8 @@ scanButton.addEventListener("click", async () => {
 					 var file  = decoder.decode(record);
 					log("text payload: " + text );
 					console.log("text payload: " + text );
+					log("text payload: " + file );
+					console.log("text payload: " + file );
        				break;
       	  	  	case "url":
         	  		// TODO: Read URL record with record data.
